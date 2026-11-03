@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PromptVault</title>
+  <style>
+    body { width: 350px; font-family: system-ui, sans-serif; padding: 12px; margin: 0; }
+    h2 { margin: 0 0 12px; font-size: 16px; }
+    input, textarea, select { width: 100%; padding: 8px; margin: 4px 0; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+    button { background: #6366f1; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; margin: 4px 2px; }
+    button:hover { background: #4f46e5; }
+    .prompt-item { border: 1px solid #eee; padding: 8px; margin: 6px 0; border-radius: 6px; font-size: 13px; }
+    .prompt-item .title { font-weight: bold; }
+    .premium-badge { background: #f59e0b; color: white; font-size: 10px; padding: 2px 6px; border-radius: 10px; }
+    #promptList { max-height: 300px; overflow-y: auto; }
+  </style>
+</head>
+<body>
+  <h2>PromptVault <span id="planBadge" class="premium-badge" style="display:none;">PRO</span></h2>
+  <input type="text" id="search" placeholder="Search prompts...">
+  <div id="promptList"></div>
+  <hr>
+  <input type="text" id="newTitle" placeholder="Prompt title">
+  <textarea id="newContent" placeholder="Paste or type your prompt" rows="4"></textarea>
+  <input type="text" id="newTags" placeholder="Tags (comma separated)">
+  <button id="saveBtn">Save Prompt</button>
+  <button id="upgradeBtn" style="background:#f59e0b;">Upgrade to Pro</button>
+  <script src="popup.js"></script>
+</body>
+</html>
